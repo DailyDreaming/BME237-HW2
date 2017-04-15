@@ -1,0 +1,58 @@
+\documentclass[10pt,letter]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{fullpage}
+
+\begin{document}
+
+\title{\textbf{BME 237: Applied RNA Bioinformatics} \\
+Week 2 Problem Set: RNA-Seq Mapping}
+
+\author{Kanye \& Kanye}
+
+\date{April 18, 2017}
+ 
+\maketitle
+
+\section*{Concepts}
+
+\paragraph{1.)} \textbf{You generated an RNA-Seq library from polyA-selected RNA from HeLa cells. You sequenced 50 million paired-end 50bp reads, using an unstranded protocol.  You used HISAT for the alignment and were able to map 40 million paired-end reads. What is the FPKM for the gene STK11 if the read-pair count was 1,000? Use the GENCODE v19 reference for your gene annotation.}
+
+\paragraph{2.)} \textbf{Some RNA-Seq analysis approaches involve aligning reads directly to spliced annotated transcript sequences, instead of against the genome. You decide to try this approach, particularly since you don’t care about unannotated alternative splicing events and are only interested in gene expression quantification.}
+\subparagraph{a.)} \textbf{Give 2 reasons why this would be beneficial:}
+\subparagraph{b.)} \textbf{Give 2 reasons why this may not be ideal:}
+
+\section*{RNA-Seq Alignment}
+
+\paragraph{1.)} \textbf{Align the FASTQ files with STAR and HISAT. I suggest you and your partner(s) decide on which aligner you want to work with and share results.}
+\subparagraph{a.)} \textbf{What were the exact commands you ran for STAR and HISAT?}
+\paragraph{2.)} \textbf{How many unique splice junctions were detected by STAR vs HISAT?}
+\subparagraph{a.)} \textbf{STAR unique splice junctions}
+\subparagraph{b.)} \textbf{HISAT unique splice junctions}
+
+\paragraph{3.)} \textbf{Find a splice junction that was detected by STAR, but not detected by HISAT.}
+\subparagraph{a.)} \textbf{What is the genomic coordinate of this junction?}
+\subparagraph{b.)} \textbf{How many reads were aligned to this junction?}
+\subparagraph{c.)} \textbf{For each read (up to 3 reads) that aligned to the junction in STAR, what was the resulting alignment of these reads using HISAT?}
+\subparagraph{d.)} \textbf{Include a genome browser image of the STAR read alignments for this junction. For example, you can use the UCSC Genome Browser (http://genome.ucsc.edu/) or IGV (http://www.broadinstitute.org/igv/).}
+\subparagraph{e.)} \textbf{Give one possible reason why the splice junction was not detected by HISAT?}
+
+\paragraph{4.)} \textbf{Find a splice junction that was detected by HISAT, but not detected by STAR.}
+\subparagraph{a.)} \textbf{What is the genomic coordinate of this junction?}
+\subparagraph{b.)} \textbf{How many reads were aligned to this junction?}
+\subparagraph{c.)} \textbf{For each read (up to 3 reads) that aligned to the junction in HISAT, what was the resulting alignment of these reads using STAR?}
+\subparagraph{d.)} \textbf{Include a genome browser image of the STAR read alignments for this junction. For example, you can use the UCSC Genome Browser (http://genome.ucsc.edu/) or IGV (http://www.broadinstitute.org/igv/).}
+\subparagraph{e.)} \textbf{Give one possible reason why the splice junction was not detected by STAR?}
+
+\section*{Quantification}
+
+\paragraph{1.)} \textbf{Run HTSeq count for gene quantification using the STAR alignment BAM and then separately with the HISAT alignment BAM.}
+\subparagraph{a.)} \textbf{What were the exact commands you ran?}
+
+\paragraph{2.)} \textbf{Compare gene expression counts between STAR- and HISAT-based alignments by producing an x-y scatter plot. Submit a figure of your plot. Make sure that the axes are labeled.}
+\subparagraph{a.)} \textbf{Describe the resulting plot. How similar are the gene expression counts and what is your measure of similarity? If there are differences in the gene expression read counts between STAR and HISAT what are one or more possible causes?}
+
+\end{document}
